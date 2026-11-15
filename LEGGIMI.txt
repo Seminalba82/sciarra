@@ -1,0 +1,103 @@
+SCIARRA™ — versione 1.8
+Il picchiaduro 3D di Agrigento.
+
+COME PUBBLICARLO (come gli altri giochi)
+1. Carica TUTTO il contenuto di questa cartella su GitHub (nuovo repository, per esempio "sciarra"), nella radice.
+2. Collegalo a Vercel come nuovo progetto. Il gioco funziona da solo: index.html contiene già tutto
+   (grafica 3D, personaggi, arene, font, suoni). Non ci sono file audio: i suoni dei colpi sono generati dal gioco.
+3. Dominio consigliato, sulla scia degli altri: sciarra.ilcaponequiz.win (dominio su Vercel + CNAME su Cloudflare).
+4. Su telefono si può installare come app (manifest + service worker).
+
+COME SI GIOCA
+- Joypad a sinistra: ◀ ▶ per muoversi, ▲ salto, ▼ abbassarsi.
+- Tasti a destra, a croce:  VERDE = pugno · ROSSO = calcio · BLU = colpo forte (o arma) · GIALLO = mossa speciale.
+- AVANTI + GIALLO = seconda mossa speciale.
+- GIÙ + VERDE = pugno basso · GIÙ + ROSSO = spazzata (fa cadere) · GIÙ + BLU = montante (butta in aria).
+- In salto, un tasto qualsiasi = calcio volante.
+- PARATA: tieni premuto il tasto BIANCO al centro dei quattro tasti (oppure INDIETRO, la direzione opposta all'avversario). Le spazzate e il Terremoto si parano da abbassati (GIÙ + INDIETRO);
+  i colpi dall'alto (calcio volante, pizza a campanile, capriola) si parano in piedi.
+- Combinazioni: se un pugno o un calcio va a segno puoi premere subito un tasto più forte per concatenare.
+- Tastiera (computer): frecce per muoversi · K pugno · L calcio · J colpo forte · I speciale · spazio parata · P pausa.
+- In PAUSA trovi l'elenco completo delle mosse del tuo combattente, audio sì/no e la qualità grafica.
+
+LE REGOLE
+- Scegli il combattente: affronti tutti gli altri, uno alla volta, in ordine casuale. Alla fine il boss: il SUPER CAPONE.
+- Ogni incontro è al meglio dei 3 match: chi ne vince 2 passa. Sull'1-1 c'è lo SPAREGGIO.
+- Ogni match dura al massimo 90 secondi: allo scadere vince chi ha più vita.
+- L'arena è scelta dal gioco a caso, ma a rotazione: le vedi tutte e quattro prima che si ripetano.
+- Se perdi puoi riprovare lo stesso incontro. Battuto il Super Capone, lo sblocchi tra i combattenti.
+
+I COMBATTENTI E LE MOSSE SPECIALI (blu · giallo · avanti+giallo)
+- FONZIU PURTUSU, il paladino: Spadata · Lancio degli occhi · Affondo del paladino
+- RUOPPOLO, il giornalista: Microfonata · Microfono col filo (va e torna in mano) · Trottola dello scoop
+- FORTE, il pizzaiolo: Gancio da forno · Pizzette volanti · Pizza a campanile (cade dall'alto)
+- IL CAPONE: Bastonata col punto interrogativo · Note, dischi e microfoni (a rotazione) · Siluro di testa
+- IL TELAMONE, il gigante di pietra dei templi (lento, forte e resistente): Martellata · Terremoto · Carica del colosso
+- LO SCERIFFO, il poliziotto: Colpo di paletta · Multa volante · Alt! Carica con paletta
+- PASQUALE DOLLARINO (agile): Calcio a trottola · Piadine volanti · Capriola con tallonata
+- SUPER CAPONE (boss): le mosse del Capone, più grosso e più alto, con l'URLO che stordisce (avanti+giallo) e il Siluro (giù+giallo).
+  L'urlo si evita parando o stando lontani: chi resta stordito vede le stelline e può essere colpito.
+
+LE ARENE
+Valle dei Templi (tramonto) · San Leone (mezzogiorno) · Favara in festa (sera) · Via Atenea (notte).
+
+FILE
+index.html · musica.mp3 (La Buffonata SKA, il sottofondo) · manifest.webmanifest · sw.js · vercel.json · robots.txt · icone · og-image.jpg
+Font Bungee incorporato (licenza OFL). Motore grafico three.js (licenza MIT), incorporato.
+
+Creato da Alberto Seminerio · proprietà di Il Capone Quiz
+
+NOVITÀ v1.1: tasto PARATA al centro dei quattro tasti · Telamone meno resistente · lo Sceriffo ha i capelli lunghi · Forte senza cappello da cuoco.
+
+NOVITÀ v1.2
+- Il Capone è rifatto sul logo ufficiale (testa a microfono, baffoni, cappello di feltro, frac, bastone col punto interrogativo).
+  Il tasto BLU ora è la bastonata.
+- Forte rifatto dalla foto: capelli brizzolati, occhiali, maglia nera con i bordini bianchi.
+- Telamone con i colori e i blocchi della statua del museo; quando vince si mette nella posa del telamone.
+- San Leone: chiosco OCEANOMARE BEACH CLUB con il logo vero, e Giorgio, Ale e Gianco che salutano.
+- Movimenti più morbidi: ogni articolazione ha una "molla", quindi i colpi hanno rincorsa e assestamento; guardia e camminata più vive.
+- DIFFICOLTÀ a scelta prima di combattere: FACILE (punti x1), MEDIO (x2), DIFFICILE (x3).
+- PUNTI: ogni colpo a segno dà punti (di più nelle combinazioni), bonus per match vinto, vita rimasta, tempo, "perfetto",
+  incontro vinto e torneo completato. Se perdi e riprovi, perdi il 30% dei punti.
+- CLASSIFICHE: tre top 10 mensili separate (facile, medio, difficile), dal pulsante CLASSIFICHE nel menu.
+  Il nome si scrive nella schermata di scelta del combattente.
+
+CLASSIFICA MONDIALE (Firebase)
+- Usa lo stesso database Firebase del Super Capone, ai percorsi:
+    arcade/sciarra/facile/top     arcade/sciarra/medio/top     arcade/sciarra/difficile/top
+- Nelle REGOLE del Realtime Database serve poter leggere e scrivere quei percorsi.
+  Se le regole attuali già coprono "arcade", non serve fare nulla.
+- Finché le regole non lo permettono (o senza rete) il gioco mostra i record del dispositivo, senza errori.
+- Per azzerare o ripulire: dalla console Firebase cancella le voci sotto arcade/sciarra.
+
+NOVITÀ v1.3: cappello del Capone appoggiato sulla testa · Capone con più forza e più resistenza · Sceriffo meno resistente.
+
+NOVITÀ v1.4: Telamone meno forte.
+
+NOVITÀ v1.5
+- Nuovo combattente: SAN CALOGERO (solo il santo, senza la vara). Mani e piedi, Manata santa (blu), Lancio del pane (giallo),
+  Ascensione e botto a terra (avanti + giallo): sale in aria come un santo e scende di botto, colpendo chi è vicino da entrambi i lati.
+- Musica di sottofondo: musica.mp3 nella stessa cartella di index.html (per cambiarla basta sostituire il file con lo stesso nome).
+  Parte al primo tocco, gira in continuo; in PAUSA ci sono MUSICA sì/no e SUONI sì/no separati.
+  Volume della musica al 50%, suoni dei colpi all'85%, così la musica si sente bene ma non copre i colpi.
+- Statistiche bilanciate: forza + velocità + resistenza fa sempre 10, e i valori veri del gioco seguono i pallini
+  (ogni pallino di forza +7% ai colpi, di velocità +12% al passo, di resistenza +8 di vita).
+
+NOVITÀ v1.6
+- Nuovo combattente: LUIGI PIRANDELLO. Mani e piedi, Schiaffo d'autore (blu), Cappello boomerang (giallo: lancia il cappello,
+  che torna indietro e gli si rimette in testa; può colpire all'andata o al ritorno), Colpo di scena (avanti + giallo).
+- Angelo Ruoppolo ora si chiama solo RUOPPOLO.
+- CREA IL TUO COMBATTENTE: nella scelta dei combattenti c'è la casella "CREA IL TUO" (poi "MODIFICA IL TUO").
+  Si scelgono nome, testa, viso (baffi, pizzetto, barba, occhiali), capelli e colore, pelle, corporatura, abito e colori,
+  le tre mosse speciali (tasto blu, giallo, avanti + giallo) prese da quelle degli altri personaggi,
+  e forza / velocità / resistenza: almeno 1 e al massimo 5 per ognuna, la somma deve fare 10.
+  Il personaggio resta salvato sul telefono di chi lo crea e non compare tra gli avversari.
+
+NOVITÀ v1.7: cappello di Pirandello appoggiato sulla testa.
+
+NOVITÀ v2.0 — VOCI DI TUTTI I 10 PERSONAGGI
+- Le voci stanno nella cartella voci/, con nome <personaggio>-<numero>.mp3 (purtusu, ruoppolo, forte, capone, telamone, sceriffo, calogero, pirandello, pasquale, supercapone: da 1 a 5 ciascuno).
+- Per ogni personaggio: 1 = inizio del match · 2 = colpo forte (blu) · 3 = speciale (giallo) · 4 = avanti + giallo · 5 = vittoria.
+- Parla una voce alla volta; le frasi dei colpi non si ripetono prima di 7 secondi; mentre una voce parla la musica si abbassa.
+- Le voci seguono l'interruttore SUONI della pausa.
+- Mancano ancora le voci dei personaggi creati col maker.

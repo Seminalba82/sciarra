@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "SCIARRA – il picchiaduro 3D di Agrigento",
+  "short_name": "Sciarra",
+  "description": "Scegli il tuo combattente e sfida tutti fino al Super Capone, tra la Valle dei Templi, San Leone, Favara e Via Atenea.",
+  "lang": "it",
+  "start_url": "/",
+  "scope": "/",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "landscape",
+  "background_color": "#07070c",
+  "theme_color": "#0b0b12",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
