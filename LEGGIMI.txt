@@ -101,3 +101,6 @@ NOVITÀ v2.0 — VOCI DI TUTTI I 10 PERSONAGGI
 - Parla una voce alla volta; le frasi dei colpi non si ripetono prima di 7 secondi; mentre una voce parla la musica si abbassa.
 - Le voci seguono l'interruttore SUONI della pausa.
 - Mancano ancora le voci dei personaggi creati col maker.
+
+NOVITÀ v2.1 — GRAFICA COME GLI ALTRI GIOCHI
+- Titolo e schermata finale: pulsante "Prova anche gli altri giochi del Capone" (giochi.ilcaponequiz.win), riquadro con ilcaponequiz.win e contatto Alberto Seminerio (albertoseminerio.com), riga crediti con versione. Pulsanti GIOCA e CLASSIFICA nello stile di Girgenti Roads.
