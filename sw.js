@@ -1,6 +1,6 @@
 // Service worker di SCIARRA: permette l'installazione come app.
 // La pagina si prende sempre da internet (così gli aggiornamenti arrivano subito); se manca la rete usa la copia salvata.
-const VERSION = "v2.1";
+const VERSION = "v2.6";
 const CACHE = "sciarra-" + VERSION;
 const PRECACHE = ["/", "/musica.mp3", "/icons/icon-192.png", "/icons/icon-512.png"];
 self.addEventListener("install", (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting())); });

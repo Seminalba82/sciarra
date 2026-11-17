@@ -104,3 +104,20 @@ NOVITÀ v2.0 — VOCI DI TUTTI I 10 PERSONAGGI
 
 NOVITÀ v2.1 — GRAFICA COME GLI ALTRI GIOCHI
 - Titolo e schermata finale: pulsante "Prova anche gli altri giochi del Capone" (giochi.ilcaponequiz.win), riquadro con ilcaponequiz.win e contatto Alberto Seminerio (albertoseminerio.com), riga crediti con versione. Pulsanti GIOCA e CLASSIFICA nello stile di Girgenti Roads.
+
+NOVITÀ v2.2
+- Il pulsante "Prova anche gli altri giochi del Capone" e il riquadro contatti restano solo nel titolo: tolti dalle schermate di fine match.
+
+NOVITÀ v2.3
+- Il nome è obbligatorio: senza nome il pulsante COMBATTI! non parte, il campo diventa rosso e trema.
+
+NOVITÀ v2.4 — NUOVO COMBATTENTE: IL BARONE
+- Il gommista: magro, vestito di nero, ciuffo biondo di lato. Forza 3 / Velocità 4 / Resistenza 3.
+- Blu: Colpo di gomma (colpisce con la gomma) · Giallo: Gomma lanciata (rotola sul pavimento, si para accovacciati) · Avanti + giallo: Pioggia di gomme (3 gomme dall'alto con segni rossi a terra; chi viene preso resta bloccato come in un salvagente per 2 secondi).
+- Voci del Barone: da aggiungere in voci/barone-1..5.mp3 (poi si collegano in main.js, VOICES).
+
+NOVITÀ v2.5 — BLOCCO ZOOM SU IPHONE
+- Bloccati pizzico a due dita, doppio tocco e zoom automatico del campo nome (testo ora 16px). Il gioco non si ingrandisce più mentre si premono i pulsanti.
+
+NOVITÀ v2.6 — VOCI DEL BARONE
+- Aggiunte voci/barone-1..5.mp3 (stessi momenti degli altri: 1 inizio match · 2 colpo forte · 3 speciale · 4 avanti+giallo · 5 vittoria). Include il blocco zoom iPhone della v2.5.
