@@ -121,3 +121,6 @@ NOVITÀ v2.5 — BLOCCO ZOOM SU IPHONE
 
 NOVITÀ v2.6 — VOCI DEL BARONE
 - Aggiunte voci/barone-1..5.mp3 (stessi momenti degli altri: 1 inizio match · 2 colpo forte · 3 speciale · 4 avanti+giallo · 5 vittoria). Include il blocco zoom iPhone della v2.5.
+
+--- v2.7 (20/11/2026) ---
+Statistiche anonime (visite e partite) per la sala giochi: vanno pubblicate prima le nuove regole Firebase (arcade/sciarra/stats e plays).
